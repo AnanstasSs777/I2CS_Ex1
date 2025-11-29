@@ -188,34 +188,24 @@ public class Ex1 {
      * @param eps - epsilon (positive small value (often 10^-3, or 10^-6).
      * @return an x value (x1<=x<=x2) for which |p1(x) - p2(x)| < eps.
      */
-    // проблема где-то тут, потому что если ставлю в серые скобки, то график становится нормальный.
-
+    
     public static double sameValue(double[] p1, double[] p2, double x1, double x2, double eps) {
-//        double f2 = Ex1.calPolynom(p1, x2) - Ex1.calPolynom(p2, x2);
-
-//        double ans = x1; // boaz's ans
-        double ans; // correct ans
+        double ans; 
 
         while ((x2 - x1) > eps) {
             double xm = (x1 + x2) / 2;
             double f1 = Ex1.calPolynom(p1, x1) - Ex1.calPolynom(p2, x1);
             double fm = Ex1.calPolynom(p1, xm) - Ex1.calPolynom(p2, xm);
 
-//            if (Math.abs(fm) < eps) { // math.abs это модуль числа
-//                ans = xm;
-//            }
 
             if (f1 * fm <= 0) {
-                x2 = xm; // переход измерения между xm and x1
-//                f2 = fm;
+                x2 = xm; 
             } else {
-                x1 = xm; // переход измерения между x2 and xm
-//                f1 = fm;
+                x1 = xm; ;
             }
         }
 
-        return (x1 + x2) / 2; // this should be here in order for the test to pass but boaz's ans = x1 conflicts this nahuy
-//        return ans;
+        return (x1 + x2) / 2; 
     }
 
     /**
@@ -233,7 +223,7 @@ public class Ex1 {
      */
     public static double length(double[] p, double x1, double x2, int numberOfSegments) {
 
-        double ans = 0; // nachinatsa s 0?
+        double ans = 0; 
 
         double dx = (x2 - x1) / numberOfSegments;
 
@@ -433,6 +423,6 @@ public class Ex1 {
             der[i - 1] = po[i] * i;
         }
 		return der;
-       // убрать после того как верну серое
+       
     }
 }

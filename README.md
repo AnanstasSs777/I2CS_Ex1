@@ -18,3 +18,5 @@ Welcome to my GitHub repository for Ex1 – Arrays, Static Functions & JUnit, pa
     
 🤝 Contributions This repository represents my personal solution and improvements to the assignment. Suggestions, optimizations, or pull requests are welcome! 
 ⭐ Enjoy the Code! Thanks for visiting! Feel free to explore, learn, or reuse parts of the implementation. If you find this helpful, consider starring the repo ★
+
+![Image_Alt](https://github.com/AnanstasSs777/I2CS_Ex1/blob/35a2a72e0712e9485efe74c108d84ec9ca8b33c8/WhatsApp%20Image%202025-11-29%20at%2018.10.33.jpeg) 

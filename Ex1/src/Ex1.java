@@ -203,6 +203,9 @@ public class Ex1 {
      * @param x2  - maximal value of the range
      * @param eps - epsilon (positive small value (often 10^-3, or 10^-6).
      * @return an x value (x1<=x<=x2) for which |p1(x) - p2(x)| < eps.
+	 This function calculate the same point/s of two polynoms, which diffrence smaller than epsilon. 
+	 W begin from the max x and min x. If points have bigger diffrence, so we catch our distance between x and check it again, untill 
+	 the true ans.
      */
     
     public static double sameValue(double[] p1, double[] p2, double x1, double x2, double eps) {
@@ -315,6 +318,8 @@ public class Ex1 {
      *
      * @param p - a String representing polynomial function.
      * @return
+	 This function is vera versa to another. Here we get array of polynom from the string. 
+	 It's actually the same logic of the solution, just usuing by string's commands.
      */
     public static double[] getPolynomFromString(String p) {
         if (p == null || p.trim().equals("")) {
@@ -372,6 +377,7 @@ public class Ex1 {
     }
 
     /**
+	My private code:
      * this code helps me distribute the degree correctly
      **/
     private static double parseCoefSimple(String s) {
@@ -387,6 +393,7 @@ public class Ex1 {
      * @param p1
      * @param p2
      * @return
+	 We getting summ of coeff of two polynoms, which in the same i in array ( with the same degree of x) 
      */
     public static double[] add(double[] p1, double[] p2) {
         double[] ans = ZERO;
@@ -406,6 +413,9 @@ public class Ex1 {
      * @param p1
      * @param p2
      * @return
+	 We calculate product of polynoms numbers/ coeff. It's almost the same code as last one, but instead of summ we get product
+	 of the coeff of x with the same degree.
+	 
      */
     public static double[] mul(double[] p1, double[] p2) {
         double[] ans = ZERO;
@@ -424,6 +434,8 @@ public class Ex1 {
      *
      * @param po
      * @return
+	 we calculate deprivative of function. we take degree of x and multiply on its coeff, and also minus/ substracct one from the degree.
+	 We do it with all i in array of polynom.
      */
     public static double[] derivative(double[] po) {
         double[] ans = ZERO;

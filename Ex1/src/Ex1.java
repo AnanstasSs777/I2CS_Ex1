@@ -19,6 +19,9 @@ public class Ex1 {
      * The zero polynomial function is represented as an array with a single (0) entry.
      */
     public static final double[] ZERO = {0};
+	/* this mine function for calculate the polynom with every length. There is another one example of the same function< but
+	prefer use this.
+	*/
 
     private static double calPolynom(double[] polynom, double x) {
         if (polynom.length < 1) return 0;
@@ -80,6 +83,11 @@ public class Ex1 {
      * @param xx
      * @param yy
      * @return an array of doubles representing the coefficients of the polynom.
+	 Dicribtion: 
+	 This function calculate our polynom by three points. In the beginning I build the polynom from the two points if our function
+	 is straight line and after from three points if it porabola. This code uses a formula from the link. there is explaing how to find 
+	 vertex's polynom. 
+	 in the end I get ppolynom as an ans. 
      */
     public static double[] PolynomFromPoints(double[] xx, double[] yy) {
         double[] ans = null;
@@ -129,6 +137,8 @@ public class Ex1 {
      * @param p1 first polynomial function
      * @param p2 second polynomial function
      * @return true iff p1 represents the same polynomial function as p2.
+	 This code uses by my first private function for checking if we have two polunoms that equal mathematically.
+	 A diffrence of polynoms has to be fewer than epsilon, ether it will return me false. 
      */
     public static boolean equals(double[] p1, double[] p2) {
         boolean ans = true;
@@ -152,6 +162,12 @@ public class Ex1 {
      *
      * @param poly the polynomial function represented as an array of doubles
      * @return String representing the polynomial function:
+	 This function give us polynom as string from an array. 
+	 First, we check if we have polynom that equals to 0. If yes, it will return me 0.
+	 Secondly, if we have only coeff, so it will return us just a plus without any sign 
+	 After, if we have coeff and x< but x's degree is 1, so it will return to ans "x".
+	 If we have coeff and x with degree< we return to ans "x^" with i, cuz it will be a degree. 
+	 in the end, we just return full ans with full polynom.
      */
     public static String poly(double[] poly) {
         String ans = "";
